@@ -10,7 +10,7 @@ from support_module import url_validator, set_styles
 from VKUI3 import Ui_MainWindow
 from seach_popup import VkDespadesPopup
 
-
+#центральный класс и точка входа в наше приложение
 class VkDespades(QtWidgets.QMainWindow):
     def __init__(self, my_addedtoken, parent = None):
         QtWidgets.QTabWidget.__init__(self, parent)
@@ -21,7 +21,7 @@ class VkDespades(QtWidgets.QMainWindow):
         self.title = '' #переменная, получающая имя группы/пользователя
         self.offset = 0 #смещение, необходимое для выборки определенного подмножества записей (vk api)
         self.count = 100 #количество записей, которое необходимо получить. Максимальное значение: 100 (vk api)
-        self.versionVKAPI = 5.126 #используемая версия vk api
+        self.versionVKAPI = 5.126 #используемая версия vk api, для корректной работы нужно следить - какая версия сейчас актуальная
         self.errorCondition = False #переменная для задания стиля поля ввода
         #self.exPopup = VkDespadesPopup(self.wallURL) #свойство,хранящее всплывающее окно
         self.exPopup = None
