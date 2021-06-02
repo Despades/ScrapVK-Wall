@@ -23,7 +23,7 @@ class VkDespades(QtWidgets.QMainWindow):
         self.count = 100 #количество записей, которое необходимо получить. Максимальное значение: 100 (vk api)
         self.versionVKAPI = 5.126 #используемая версия vk api, для корректной работы нужно следить - какая версия сейчас актуальная
         self.errorCondition = False #переменная для задания стиля поля ввода
-        #self.exPopup = VkDespadesPopup(self.wallURL) #свойство,хранящее всплывающее окно
+        #self.exPopup = VkDespadesPopup(self.wallURL) #свойство,хранящее всплывающее окно - в текущей реализации инициализировать его здесь не надо
         self.exPopup = None
         self.setWindowIcon(QtGui.QIcon('vk.png'))
         set_styles(self.ui.lineEdit)#инициализируем стили поля ввода и поля поиска
